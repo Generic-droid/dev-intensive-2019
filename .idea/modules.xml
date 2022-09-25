@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Dev-intensive.iml" filepath="$PROJECT_DIR$/.idea/modules/Dev-intensive.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Dev-intensive.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Dev-intensive.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Dev-intensive.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Dev-intensive.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Dev-intensive.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Dev-intensive.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Dev-intensive.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Dev-intensive.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/dev-intensive-2019.Dev-intensive.iml" filepath="$PROJECT_DIR$/.idea/modules/dev-intensive-2019.Dev-intensive.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/dev-intensive-2019.Dev-intensive.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/dev-intensive-2019.Dev-intensive.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/dev-intensive-2019.Dev-intensive.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/dev-intensive-2019.Dev-intensive.app.androidTest.iml" />
