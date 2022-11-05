@@ -1,16 +1,17 @@
 package ru.skillbranch.devintensive
 
-import android.app.Activity
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+
 import ru.skillbranch.devintensive.extensions.hideKeyboard
-import ru.skillbranch.devintensive.extensions.isKeyboardClosed
 import ru.skillbranch.devintensive.models.Bender
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -34,10 +35,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        iv_bender
-        tv_text
-        et_message
-        iv_send
+        val iv_bender = findViewById<ImageView>(R.id.iv_bender)
+        val tv_text = findViewById<TextView>(R.id.tv_text)
+        val et_message = findViewById<EditText>(R.id.et_message)
+        val iv_send = findViewById<ImageView>(R.id.iv_send)
 
         val status = savedInstanceState?.getString("STATUS") ?: Bender.Status.NORMAL.name
         val question = savedInstanceState?.getString("QUESTION") ?: Bender.Question.NAME.name
@@ -160,6 +161,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
 
+        val et_message = findViewById<EditText>(R.id.et_message)
+
         val message = et_message.text.toString()
 
         outState.putString("STATUS", benderObj.status.name)
@@ -169,6 +172,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
+        val iv_bender = findViewById<ImageView>(R.id.iv_bender)
+        val tv_text = findViewById<TextView>(R.id.tv_text)
+        val et_message = findViewById<EditText>(R.id.et_message)
+
         if (p0?.id == R.id.iv_send) {
             val (phrase, color) = benderObj.listenAnswer(et_message.text.toString())
             et_message.setText("")
